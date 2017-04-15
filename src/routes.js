@@ -19,13 +19,17 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     templateUrl: 'src/menuapp/templates/home.template.html'
   })
 
-  .state('categories', {
-    url: '/categories',
+  .state('categoriesList', {
+    url: '/categoriesList',
     templateUrl: 'src/menuapp/templates/categories.template.html',
-    controller: 'categoriesListController as categories'
-  })
-
-
+    controller: 'categoriesListController as categories',
+    // resolve: {
+    //   categories: ['MenuDataService', function(MenuDataService){
+    //     return MenuDataService.getAllCategories().then (function(response) {
+    //       return response.data;
+    //     });
+    //   }]
+    // }
+    })
 }
-
 })();
