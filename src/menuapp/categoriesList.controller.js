@@ -2,20 +2,13 @@
 'use strict';
 
   angular.module('MenuApp')
-  .controller('categoriesListController', CategoriesListController);
+  .controller('categoriesController', CategoriesController);
 
-  CategoriesListController.$inject = ['categories'];
-function CategoriesListController(categories) {
-  var categoriesList = this;
-console.log(categoriesList);
-  categoriesList.items = [];
-   categoriesList.$onInit = function functionName() {
-      MenuDataService.getAllCategories()
-      .then(function (result) {
-console.log("controller ", categories);
-        categoriesList.items = result
-      });
-   };
+  CategoriesController.$inject = ['categories'];
+function CategoriesController(categories) {
+  var categoriesCtrl = this;
+  console.log(this);
+  categoriesCtrl.categories = categories
 }
 console.log("categoriesListController");
 })();
