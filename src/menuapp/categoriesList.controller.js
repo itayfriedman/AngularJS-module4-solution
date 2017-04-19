@@ -7,8 +7,9 @@
   CategoriesController.$inject = ['categories'];
 function CategoriesController(categories) {
   var categoriesCtrl = this;
-  console.log(this);
-  categoriesCtrl.categories = categories
+  categoriesCtrl.categories = categories;
 }
-console.log("categoriesListController");
+
+
+
 })();

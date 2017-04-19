@@ -24,12 +24,12 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     templateUrl: 'src/menuapp/templates/categories.template.html',
     controller: 'categoriesController as categoriesCtrl',
     resolve: {
-      categories: ['MenuDataService', function(MenuDataService){
-        return MenuDataService.getAllCategories().then (function(response) {
+      categories: ['menuDataService', function(MenuDataService) {
+        return MenuDataService.getAllCategories().then(function(response) {
           return response.data;
-        });
-      }]
-    }
+          });
+        }]
+      }
     })
 }
 })();
