@@ -31,5 +31,14 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
         }]
       }
     })
+
+    .state('items', {
+        url: '/category-items/{categoryShortName}',
+        templateUrl: 'src/menuapp/templates/items.template.html',
+        controller: 'itemsController as itemsCtrl',
+        
+    })
+
+
 }
 })();
