@@ -20,7 +20,7 @@
     return $http({
       method: 'get',
       url: 'https://davids-restaurant.herokuapp.com/menu_items.json',
-      params: { category: ShortName }
+      params: { category: categoryShortName }
     });
   }
   }

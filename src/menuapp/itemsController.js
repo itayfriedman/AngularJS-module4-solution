@@ -4,12 +4,11 @@
   angular.module('MenuApp')
   .controller('itemsControlle', ItemsController);
 
-  ItemsController.$inject = [''];
-function CategoriesController() {
+  ItemsController.$inject = ['items'];
+function ItemsController(items) {
   var itemsCtrl = this;
-  
+  itemsCtrl.items = items;
+
 }
-
-
 
 })();
