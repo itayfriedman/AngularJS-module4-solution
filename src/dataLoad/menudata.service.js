@@ -15,7 +15,6 @@
     });
   }
 
-
   service.getItemsForCategory = function (categoryShortName) {
     return $http({
       method: 'get',
